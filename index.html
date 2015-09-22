@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="editorApp">
+<head>
+    <title>Content Tools & Angular JS</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="contenttools-build/content-tools.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+        body{
+            max-width: 800px;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Content Tools & Angular JS</h1>
+    <br>
+    <section class="[ well ]" ng-editor="my-content">
+
+        <h2>5 rules for naming variables</h2>
+
+        <p class="article__by-line">
+            by <b>Anthony Blackshaw</b> · 18th January 2015
+        </p>
+
+        <blockquote>
+            Writing poor quality code will dramatically reduce the time
+            you get to spend doing things you love, if you’re lucky
+            enough to leave a project shortly after such a contribution
+            everyone who subsequently has to work with your code will
+            think you an arsehole.
+        </blockquote>
+
+        <div class="thumbnail" style="width: 610px;">
+            <img src="image.png" alt="Example of bad variable names">
+            <div class="caption">
+                <b>Above:</b> This example is code found in
+                a live and commercial project. Clearly the developer thought
+                <b>user.n5</b> would still clearly point to the 5th
+                character of a the user's name when used elsewhere.
+            </div>
+        </div>
+
+        <p>
+            The names we devise for folders, files, variables,
+            functions, classes and any other user definable construct
+            will (for the most part) determine how easily someone else
+            can read and understand what we have written.
+        </p>
+
+        <p>
+            To avoid repetition in the remainder of this section we use
+            the term variable to cover folders, files, variables,
+            functions, and classes.
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <section class="[ well ]" ng-editor="my-content-another">
+        <h3>You can have another editable area on the same page</h3>
+        <p>Another content....</p>
+    </section>
+    <div class="well">
+        <p>JSON Output from Content Tools</p> 
+
+        {{regions}}
+    </div>
+
+    <script type="text/javascript" src="contenttools-build/content-tools.js"></script>
+    <script type="text/javascript" src="sandbox.js"></script>
+</body>
+</html>

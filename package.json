@@ -1,0 +1,32 @@
+{
+  "name": "contenttools-angularjs",
+  "version": "1.0.0",
+  "description": "A demo integration for Content Tools JS & Angular JS",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "serve": "^1.4.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.11.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cotidia/contenttools-angularjs.git"
+  },
+  "keywords": [
+    "content",
+    "tools",
+    "angular",
+    "js"
+  ],
+  "author": "Guillaume Piot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cotidia/contenttools-angularjs/issues"
+  },
+  "homepage": "https://github.com/Cotidia/contenttools-angularjs"
+}
