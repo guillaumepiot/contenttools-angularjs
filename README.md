@@ -12,6 +12,10 @@ Install the Node.js dependencies:
 
     $ npm install
 
+## Start the demo site
+
+    $ grunt serve
+
 ## Usage
 
 Using an Angular directive called "ng-editor", it will bind the DOM element to
