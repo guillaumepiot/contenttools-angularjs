@@ -35,7 +35,6 @@ a save to server function.
         .directive('ngEditor',  function(){
             
             function link(scope, element, attrs){
-                console.log(scope, element, attrs);
 
                 editor = new ContentTools.EditorApp.get()
                 editor.init('.editable', 'ng-editor')
