@@ -40,9 +40,11 @@ a save to server function.
             
             function link(scope, element, attrs){
 
+                // Initialise the editor
                 editor = new ContentTools.EditorApp.get()
-                editor.init('.editable', 'ng-editor')
+                editor.init('[ng-editor]', 'ng-editor')
 
+                // Bind a function on editor save
                 editor.bind('save', function(regions, autoSave){
                     
                     scope.$apply(function(){
