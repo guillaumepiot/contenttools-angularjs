@@ -1,5 +1,5 @@
 angular.module('editorApp', [])
-    .directive('ngEditor',  function(){
+    .directive('ngEditor',['$compile', function($compile){
         
         function link(scope, element, attrs){
 
@@ -19,10 +19,42 @@ angular.module('editorApp', [])
 
             })
 
+
+
+            // Capture element changes
+            ContentEdit.Root.get().bind('taint', function (elm) {
+
+                // If it has a parent, it is not a Region and will have "attr"
+                if (elm.parent()) {
+                    if (elm.attr('ng-test')){
+                        console.log("Reload directive");
+                        
+                        elm.selection(new ContentSelect.Range(0, 0));
+                        $compile(element.contents())(scope);
+                    }
+                }
+
+            });
+
+
         }
 
         return {
             link: link
+        }
+        
+    }])
+    .directive('ngTest', function(){
+
+        return {
+            compile: function(element, attrs){
+                var htmlText = 'test';
+                console.log(element.child)
+                element.html(htmlText);
+            },
+            link: function (scope, element) {
+                console.log("Scope loaded")
+            }
         }
         
     })
